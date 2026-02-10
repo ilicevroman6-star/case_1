@@ -51,7 +51,7 @@ def rectangle(x, y, a, b):
 
     end_fill()
     home()
-11
+
 
 hideturtle()
 parallelogram(10,40,50,45)
