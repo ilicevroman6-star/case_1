@@ -31,9 +31,31 @@ def triangle(x, y, a, b):
     left(143)
     up()
     end_fill()
+    home()
+
+def rectangle(x, y, a, b):
+    #a - длина прямоугольника, b - высота прямоугольника
+    down()
+    color("blue")
+    fillcolor('blue')
+    begin_fill()
+
+    forward(b)
+    left(90)
+    forward(a)
+    left(90)
+    forward(b)
+    left(90)
+    forward(a)
+    left(90)
+
+    end_fill()
+    home()
+
 
 hideturtle()
 parallelogram(10,40,50,45)
 triangle(-50,-40,80,50)
+rectangle(10,40,50,45)
 
 done()
