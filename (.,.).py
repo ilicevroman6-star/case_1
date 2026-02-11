@@ -1,3 +1,4 @@
+#Белявская Алиса, Пимшина Дарья, Макарова Анастасия, Ильичёв Роман
 from turtle import *
 speed(1)
 def parallelogram(x, y, a, b):
@@ -119,3 +120,4 @@ trapezoid(-150, 0, 200)
 rhombus(100, 0, 100)
 
 done()
+
