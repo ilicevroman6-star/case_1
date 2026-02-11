@@ -36,8 +36,8 @@ def triangle(x, y, a, b):
 def rectangle(x, y, a, b):
     #a - длина прямоугольника, b - высота прямоугольника
     down()
-    color("blue")
-    fillcolor('blue')
+    color("red")
+    fillcolor('red')
     begin_fill()
 
     forward(b)
@@ -50,6 +50,28 @@ def rectangle(x, y, a, b):
     left(90)
 
     end_fill()
+    up()
+    home()
+
+
+def equilateral_triangle(x, y, a):
+    #a - длина стороны треугольника
+    color("green")
+    fillcolor("green")
+    up()
+    setposition(x, y)  #начальная точка
+    down()
+
+    begin_fill()
+
+    forward(a)
+    left(120)
+    forward(a)
+    left(120)
+    forward(a)
+
+    end_fill()
+    up()
     home()
 
 
@@ -57,5 +79,6 @@ hideturtle()
 parallelogram(10,40,50,45)
 triangle(-50,-40,80,50)
 rectangle(10,40,50,45)
+equilateral_triangle(10,40,50)
 
 done()
