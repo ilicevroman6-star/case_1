@@ -1,5 +1,6 @@
 #Белявская Алиса, Пимшина Дарья, Макарова Анастасия, Ильичёв Роман
 from turtle import *
+from math import sqrt
 speed(1)
 def parallelogram(x, y, a, b):
     fillcolor('yellow')
@@ -40,7 +41,6 @@ def rectangle(x, y, a, b):
     color("red")
     fillcolor('red')
     begin_fill()
-
     forward(b)
     left(90)
     forward(a)
@@ -49,11 +49,9 @@ def rectangle(x, y, a, b):
     left(90)
     forward(a)
     left(90)
-
     end_fill()
     up()
     home()
-
 
 def equilateral_triangle(x, y, a):
     #a - длина стороны треугольника
@@ -62,15 +60,12 @@ def equilateral_triangle(x, y, a):
     up()
     setposition(x, y)  #начальная точка
     down()
-
     begin_fill()
-
     forward(a)
     left(120)
     forward(a)
     left(120)
     forward(a)
-
     end_fill()
     up()
     home()
@@ -111,7 +106,45 @@ def rhombus(x, y, a):
     up()
     home()
 
+def right_triangle(x, y, a, b):
+    up()
+    setposition(x, y)
+    down()
+    color("orange")
+    fillcolor("orange")
+    pencolor("orange")
+    begin_fill()
+    forward(a)
+    left(90)
+    forward(b)
+    c = sqrt(a ** 2 + b ** 2) #гипотенуза
+    forward(c)
+    left(135)
+    end_fill()
+    home()
+
+def square(x, y, a):
+    up()
+    setposition(x, y)
+    down()
+    color("pink")
+    fillcolor("pink")
+    pencolor("pink")
+    begin_fill()
+    forward(a)
+    left(90)
+    forward(a)
+    left(90)
+    forward(a)
+    left(90)
+    forward(a)
+    left(90)
+    end_fill()
+    home()
+
 hideturtle()
+right_triangle(0, 0, 100, 80)
+square(0, 0, 50)
 parallelogram(10,40,50,45)
 triangle(-50,-40,80,50)
 rectangle(10,40,50,45)
@@ -120,4 +153,3 @@ trapezoid(-150, 0, 200)
 rhombus(100, 0, 100)
 
 done()
-
