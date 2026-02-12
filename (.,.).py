@@ -1,9 +1,10 @@
 #Белявская Алиса, Пимшина Дарья, Макарова Анастасия, Ильичёв Роман
 from turtle import *
 from math import sqrt
-speed(1)
+speed(2)
 def parallelogram(x, y, a, b):
     fillcolor('yellow')
+    pencolor('yellow')
     begin_fill()
     up()
     goto(x, y)
@@ -21,6 +22,7 @@ def parallelogram(x, y, a, b):
 
 def triangle(x, y, a, b):
     fillcolor('blue')
+    pencolor('blue')
     begin_fill()
     up()
     goto(x, y)
@@ -37,8 +39,9 @@ def triangle(x, y, a, b):
 
 def rectangle(x, y, a, b):
     #a - длина прямоугольника, b - высота прямоугольника
+    goto(x, y)
     down()
-    color("red")
+    color("red")    
     fillcolor('red')
     begin_fill()
     forward(b)
