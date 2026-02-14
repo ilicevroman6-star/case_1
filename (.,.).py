@@ -1,7 +1,11 @@
 #Белявская Алиса, Пимшина Дарья, Макарова Анастасия, Ильичёв Роман
 from turtle import *
 from math import sqrt
+from math import acos
+from math import degrees
 speed(2)
+
+#параллелограмм, a,b - пары параллельных сторон
 def parallelogram(x, y, a, b):
     fillcolor('yellow')
     pencolor('yellow')
@@ -20,6 +24,7 @@ def parallelogram(x, y, a, b):
     up()
     home()
 
+#равнобедренный треугольник, b - основание, a - равные стороны
 def triangle(x, y, a, b):
     fillcolor('blue')
     pencolor('blue')
@@ -27,14 +32,15 @@ def triangle(x, y, a, b):
     up()
     goto(x, y)
     down()
+    t1 = degrees(acos(b / (2 * a))) #величина угла при основании в градусах
+    t2 = degrees(acos(1 - (b**2 / (2 * a**2)))) #величина угла между равными сторонами в градусах
+    forward(b)
+    left(180 - t1)
     forward(a)
-    left(143)
-    forward(b)
-    left(74)
-    forward(b)
-    left(143)
-    up()
+    left(180 - t2)
+    forward(a)
     end_fill()
+    up()
     home()
 
 def rectangle(x, y, a, b):
@@ -156,3 +162,4 @@ trapezoid(-150, 0, 200)
 rhombus(100, 0, 100)
 
 done()
+
