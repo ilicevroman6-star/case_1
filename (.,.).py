@@ -3,6 +3,7 @@ from turtle import *
 from math import sqrt
 from math import acos
 from math import degrees
+from math import atan
 speed(2)
 
 #параллелограмм, a,b - пары параллельных сторон
@@ -138,9 +139,7 @@ def square(x, y, a):
     home()
 
 
-#прямоугольный треугольник, angle1, angle2 - острые углы треугольника (в градусах)
-#a = side_length - первый катет, b - второй катет, c - гипотенуза
-def right_triangle_by_angles(x, y, angle1, angle2, side_length):
+def right_triangle(x, y, a, b):
     up()
     setposition(x, y)
     down()
@@ -148,20 +147,15 @@ def right_triangle_by_angles(x, y, angle1, angle2, side_length):
     fillcolor("orange")
     pencolor("orange")
     begin_fill()
-    # Переводим углы в радианы для расчетов
-    import math
-    rad1 = math.radians(angle1)
-    rad2 = math.radians(angle2)
-    # Вычисляем длины катетов
-    a = side_length 
-    b = a * math.tan(rad2)
-    c = a / math.cos(rad2)  
     forward(a)
     left(90)
     forward(b)
+    c = sqrt(a ** 2 + b ** 2) #гипотенуза
+    o = degrees(atan(a / b))
+    left(180 - o)
     forward(c)
-    left(180 - angle1)  # возвращаем черепаху в исходное направление
     end_fill()
+    up()
     home()
 
 
@@ -176,4 +170,5 @@ trapezoid(-150, 0, 200)
 rhombus(100, 0, 100)
 
 done()
+
 
