@@ -80,21 +80,21 @@ def equilateral_triangle(x, y, a):
     up()
     home()
 
-def trapezoid(x, y, a):
-    color('purple')
+def trapezoid(x, y, a, b):
     up()
     setposition(x, y)
     down()
+    pencolor('white')
+    pensize(2)
     fillcolor('purple')
     begin_fill()
     forward(a)
     left(120)
-    forward(a / 2)
+    forward(100)
     left(60)
-    forward(a / 2)
+    forward(b)
     left(60)
-    forward(a / 2)
-    left(60)
+    forward(100)
     end_fill()
     up()
     home()
@@ -104,6 +104,8 @@ def rhombus(x, y, a):
     up()
     setposition(x, y)
     down()
+    pencolor('white')
+    pensize(2)
     fillcolor('cyan')
     begin_fill()
     right(60)
@@ -167,10 +169,11 @@ parallelogram(10,40,50,45)
 triangle(-50,-40,80,50)
 rectangle(10,40,50,45)
 equilateral_triangle(10,40,50)
-trapezoid(-150, 0, 200)
+trapezoid(0, 0, 200, 100)
 rhombus(100, 0, 100)
 
 done()
+
 
 
 
