@@ -115,23 +115,8 @@ def rhombus(x, y, a):
     up()
     home()
 
-def right_triangle(x, y, a, b):
-    up()
-    setposition(x, y)
-    down()
-    color("orange")
-    fillcolor("orange")
-    pencolor("orange")
-    begin_fill()
-    forward(a)
-    left(90)
-    forward(b)
-    c = sqrt(a ** 2 + b ** 2) #гипотенуза
-    forward(c)
-    left(135)
-    end_fill()
-    home()
 
+#квадрат, а - сторона
 def square(x, y, a):
     up()
     setposition(x, y)
@@ -140,6 +125,7 @@ def square(x, y, a):
     fillcolor("pink")
     pencolor("pink")
     begin_fill()
+
     forward(a)
     left(90)
     forward(a)
@@ -151,8 +137,36 @@ def square(x, y, a):
     end_fill()
     home()
 
+
+#прямоугольный треугольник, angle1, angle2 - острые углы треугольника (в градусах)
+#a = side_length - первый катет, b - второй катет, c - гипотенуза
+def right_triangle_by_angles(x, y, angle1, angle2, side_length):
+    up()
+    setposition(x, y)
+    down()
+    color("orange")
+    fillcolor("orange")
+    pencolor("orange")
+    begin_fill()
+    # Переводим углы в радианы для расчетов
+    import math
+    rad1 = math.radians(angle1)
+    rad2 = math.radians(angle2)
+    # Вычисляем длины катетов
+    a = side_length 
+    b = a * math.tan(rad2)
+    c = a / math.cos(rad2)  
+    forward(a)
+    left(90)
+    forward(b)
+    forward(c)
+    left(180 - angle1)  # возвращаем черепаху в исходное направление
+    end_fill()
+    home()
+
+
 hideturtle()
-right_triangle(0, 0, 100, 80)
+right_triangle_by_angles(0, 0, 30, 60, 50)
 square(0, 0, 50)
 parallelogram(10,40,50,45)
 triangle(-50,-40,80,50)
