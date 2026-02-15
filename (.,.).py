@@ -139,6 +139,7 @@ def square(x, y, a):
     home()
 
 
+#прямоугольный треугольник, a, b - катеты
 def right_triangle(x, y, a, b):
     up()
     setposition(x, y)
@@ -170,5 +171,6 @@ trapezoid(-150, 0, 200)
 rhombus(100, 0, 100)
 
 done()
+
 
 
