@@ -79,7 +79,7 @@ def equilateral_triangle(x, y, a):
     end_fill()
     up()
     home()
-# трапеция, а - большое основание, в - маленькое основание
+# трапеция, а - нижнее основание, в - верхнее основание
 def trapezoid(x, y, a, b):
     up()
     setposition(x, y)
@@ -173,6 +173,7 @@ trapezoid(0, 0, 200, 100)
 rhombus(100, 0, 100)
 
 done()
+
 
 
 
