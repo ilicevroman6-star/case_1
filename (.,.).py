@@ -138,7 +138,9 @@ def square(x, y, a):
     forward(a)
     left(90)
     end_fill()
+    up()
     home()
+    down()
 
 
 #прямоугольный треугольник, a, b - катеты
@@ -173,6 +175,7 @@ trapezoid(0, 0, 200, 100)
 rhombus(100, 0, 100)
 
 done()
+
 
 
 
