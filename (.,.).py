@@ -187,7 +187,7 @@ def cat():
 def plane():
     parallelogram(20, 200, 60, 35, "blue")
     equilateral_triangle(84, 200, 35, "lightblue")
-    right_triangle(107, 230, 55, 95, "seablue")
+    right_triangle(107, 230, 55, 95, "blue")
     left(90)
     right_triangle(162, 133, 95, 55, "blue")
     square(165, 205, 35, "green")
@@ -257,6 +257,7 @@ helicopter()
 
 
 done()
+
 
 
 
