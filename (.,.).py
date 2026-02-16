@@ -4,7 +4,8 @@ from math import sqrt
 from math import acos
 from math import degrees
 from math import atan
-speed(2)
+speed(7)
+
 
 #параллелограмм, a,b - пары параллельных сторон
 def parallelogram(x, y, a, b):
@@ -44,21 +45,19 @@ def triangle(x, y, a, b):
     up()
     home()
 
+# прямоугольник: а- длина, b - высота 
 def rectangle(x, y, a, b):
-    #a - длина прямоугольника, b - высота прямоугольника
+    up()
     goto(x, y)
     down()
-    color("red")    
-    fillcolor('red')
+    color("salmon")
+    fillcolor('salmon')
     begin_fill()
-    forward(b)
-    left(90)
-    forward(a)
-    left(90)
-    forward(b)
-    left(90)
-    forward(a)
-    left(90)
+    for i in range(2):
+        forward(a)
+        left(90)
+        forward(b)
+        left(90)
     end_fill()
     up()
     home()
@@ -125,17 +124,11 @@ def square(x, y, a):
     down()
     color("pink")
     fillcolor("pink")
-    pencolor("pink")
     begin_fill()
 
-    forward(a)
-    left(90)
-    forward(a)
-    left(90)
-    forward(a)
-    left(90)
-    forward(a)
-    left(90)
+    for i in range(4):
+        forward(a)
+        left(90)
     end_fill()
     up()
     home()
@@ -258,17 +251,18 @@ def flower():
     left(150)
     equilateral_triangle(-130, 233, 50)
 
+hideturtle()
 rabbit()
 flower()
-
 fish()
 cat()
 plane()
 helicopter()
-hideturtle()
+
 
 
 done()
+
 
 
 
