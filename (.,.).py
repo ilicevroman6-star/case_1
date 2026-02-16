@@ -193,17 +193,43 @@ def cat():
 
 cat()
 
+# рисунок "самолёт"
+
+def plane():
+    parallelogram(20, 200, 60, 35)
+    equilateral_triangle(84, 200, 35)
+    right_triangle(107, 230, 55, 95)
+    left(90)
+    right_triangle(162, 133, 95, 55)
+    square(165, 205, 35)
+    left(180)
+    right_triangle(243, 240, 40, 35)
+    right_triangle(193, 243, 50, 35)
+
+plane()
+
+# рисунок "вертолёт"
+
+def helicopter():
+    left(45)
+    square(45, 43, 40)
+    left(180)
+    triangle(112, 53, 35, 52)
+    triangle(91, 30, 35, 52)
+    left(90)
+    triangle(175, 5, 74, 100)
+    left(270)
+    triangle(180, 105, 74, 100)
+    parallelogram(180, 110, 55, 35)
+    triangle(110, 110, 50, 65)
+
+
+helicopter()
 hideturtle()
-right_triangle_by_angles(0, 0, 30, 60, 50)
-square(0, 0, 50)
-parallelogram(10,40,50,45)
-triangle(-50,-40,80,50)
-rectangle(10,40,50,45)
-equilateral_triangle(10,40,50)
-trapezoid(0, 0, 200, 100)
-rhombus(100, 0, 100)
+
 
 done()
+
 
 
 
