@@ -246,6 +246,32 @@ def flower():
     left(150)
     equilateral_triangle(-130, 233, 50, "green")
 
+def robot():
+    left(180)
+    trapezoid(45, -170, 15, 25)
+    triangle(60, -170, 50, 65)
+    rectangle(22, -241, 30, 70)
+    rectangle(142, -241, 30, 70)
+    rectangle(65, -328, 20, 70)
+    rectangle(100, -328, 20, 70)
+    rhombus(82, -210, 25)
+
+def rocket():
+    equilateral_triangle(209,-140,50)
+    left(90)
+    right_triangle(260, -198, 54, 55)
+    right(90)
+    triangle(207, -150, 65, 90)
+    left(90)
+    triangle(257, -288, 65, 90)
+    left(45)
+    square(207, -309, 45)
+    left(45)
+    right_triangle(190, -328, 25, 50)
+    right(90)
+    parallelogram(260, -240, 50, 43)
+
+
 hideturtle()
 rabbit()
 flower()
@@ -253,10 +279,13 @@ fish()
 cat()
 plane()
 helicopter()
+robot()
+rocket()
 
 
 
 done()
+
 
 
 
