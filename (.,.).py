@@ -45,7 +45,7 @@ def triangle(x, y, a, b, color):
     up()
     home()
 
-# прямоугольник: а - длина, b - высота 
+# прямоугольник: а - длина, b - высота; начинает рисовать с левого нижнего угла
 def rectangle(x, y, a, b, color):
     up()
     goto(x, y)
@@ -62,13 +62,13 @@ def rectangle(x, y, a, b, color):
     up()
     home()
 
-#равносторонний треугольник
+#равносторонний треугольник, а - длина стороны треугольника; начинает рисовать с левого нижнего угла
 def equilateral_triangle(x, y, a, color):
-    #a - длина стороны треугольника
     pencolor(color)
     fillcolor(color)
     up()
-    setposition(x, y)  #начальная точка
+    #начальная точка
+    setposition(x, y) 
     down()
     begin_fill()
     forward(a)
@@ -301,5 +301,6 @@ robot()
 rocket()
 
 done()
+
 
 
