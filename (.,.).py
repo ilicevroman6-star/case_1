@@ -233,8 +233,7 @@ def rabbit():
     triangle(-285, 205, 40, 60)
     right_triangle(-365, 95, 50, 50)
     left(180)
-    right_triangle_2(-280,95, 30, 30)
-
+    
 
 def flower():
     left(180)
@@ -270,6 +269,7 @@ hideturtle()
 
 
 done()
+
 
 
 
