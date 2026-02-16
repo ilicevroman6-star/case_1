@@ -194,7 +194,6 @@ def cat():
 cat()
 
 # рисунок "самолёт"
-
 def plane():
     parallelogram(20, 200, 60, 35)
     equilateral_triangle(84, 200, 35)
@@ -209,7 +208,6 @@ def plane():
 plane()
 
 # рисунок "вертолёт"
-
 def helicopter():
     left(45)
     square(45, 43, 40)
@@ -229,6 +227,7 @@ hideturtle()
 
 
 done()
+
 
 
 
