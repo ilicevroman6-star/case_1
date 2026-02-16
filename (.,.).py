@@ -156,7 +156,7 @@ def right_triangle(x, y, a, b, color):
 def fish():
     left(-60)
     parallelogram(-290, -215, -45, -27, "blue")
-    rhombus(-290, -215, 27)
+    rhombus(-290, -215, 27, 'red')
     left(180)
     right_triangle(-290, -215, 27, 30, "red")
     right_triangle(-346, -245, 27, 30, "purple")
@@ -257,6 +257,7 @@ helicopter()
 
 
 done()
+
 
 
 
