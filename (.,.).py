@@ -50,7 +50,7 @@ def rectangle(x, y, a, b, color):
     up()
     goto(x, y)
     down()
-    color(color)
+    pencolor(color)
     fillcolor(color)
     begin_fill()
     for i in range(2):
@@ -64,7 +64,7 @@ def rectangle(x, y, a, b, color):
 
 def equilateral_triangle(x, y, a, color):
     #a - длина стороны треугольника
-    color(color)
+    pencolor(color)
     fillcolor(color)
     up()
     setposition(x, y)  #начальная точка
@@ -99,7 +99,7 @@ def trapezoid(x, y, a, color):
     home()
 #ромб, а - стороны
 def rhombus(x, y, a, color):
-    color(color)
+    pencolor(color)
     up()
     setposition(x, y)
     down()
@@ -121,7 +121,7 @@ def square(x, y, a, color):
     up()
     setposition(x, y)
     down()
-    color(color)
+    pencolor(color)
     fillcolor(color)
     begin_fill()
 
@@ -139,7 +139,7 @@ def right_triangle(x, y, a, b, color):
     up()
     setposition(x, y)
     down()
-    color(color)
+    pencolor(color)
     fillcolor(color)
     begin_fill()
     forward(a)
@@ -224,7 +224,7 @@ def rabbit():
     
 
 def flower():
-    left(180)
+    
     trapezoid(-80, 135, 100, "yellow")
     left(180)
     trapezoid(-55, 180, 150, "blue")
@@ -257,6 +257,7 @@ helicopter()
 
 
 done()
+
 
 
 
