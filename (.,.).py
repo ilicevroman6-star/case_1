@@ -202,29 +202,29 @@ def cat():
 
 # рисунок "самолёт"
 def plane():
-    parallelogram(20, 200, 60, 35, "blue")
+    parallelogram(20, 200, 60, 35, "skyblue")
     equilateral_triangle(84, 200, 35, "lightblue")
-    right_triangle(107, 230, 55, 95, "blue")
+    right_triangle(107, 230, 55, 95, "royalblue")
     left(90)
-    right_triangle(162, 133, 95, 55, "blue")
-    square(165, 205, 35, "green")
+    right_triangle(162, 133, 95, 55, "royalblue")
+    square(165, 205, 35, "skyblue")
     left(180)
-    right_triangle(243, 240, 40, 35, "blue")
-    right_triangle(193, 243, 50, 35, "lightblue")
+    right_triangle(243, 240, 40, 35, "deepskyblue")
+    right_triangle(193, 243, 50, 35, "navy")
 
 # рисунок "вертолёт"
 def helicopter():
     left(45)
-    square(45, 43, 40, "red")
+    square(45, 43, 40, "coral")
     left(180)
-    triangle(112, 53, 35, 52, "orange")
-    triangle(91, 30, 35, 52, "yellow")
+    triangle(112, 53, 35, 52, "crimson")
+    triangle(91, 30, 35, 52, "crimson")
     left(90)
-    triangle(175, 5, 74, 100, "red")
+    triangle(175, 5, 74, 100, "maroon")
     left(270)
-    triangle(180, 105, 74, 100, "green")
-    parallelogram(180, 110, 55, 35, "blue")
-    triangle(110, 110, 50, 65, "salmon")
+    triangle(180, 105, 74, 100, "firebrick")
+    parallelogram(180, 110, 55, 35, "coral")
+    triangle(110, 110, 50, 65, "lightcoral")
 
 #кролик
 def rabbit():
@@ -301,4 +301,5 @@ robot()
 rocket()
 
 done()
+
 
