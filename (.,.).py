@@ -266,30 +266,29 @@ def flower():
     equilateral_triangle(-130, 233, 50, "green")
 
 def robot():
-    left(180)
-    trapezoid(45, -170, 15, 25)
-    triangle(60, -170, 50, 65)
-    rectangle(22, -241, 30, 70)
-    rectangle(142, -241, 30, 70)
-    rectangle(65, -328, 20, 70)
-    rectangle(100, -328, 20, 70)
-    rhombus(82, -210, 25)
+    square(60, -245, 70, "green")
+    triangle(60, -170, 50, 65, 'blue')
+    rectangle(27, -244, 30, 70, 'red')
+    rectangle(134, -244, 30, 70, 'pink')
+    rectangle(65, -318, 20, 70, 'orange')
+    rectangle(100, -318, 20, 70, 'yellow')
+    rhombus(82, -210, 25, 'purple')
+
 
 def rocket():
-    equilateral_triangle(209,-140,50)
+    equilateral_triangle(209, -140, 50, "green")
     left(90)
-    right_triangle(260, -198, 54, 55)
+    right_triangle(260, -198, 54, 55, 'blue')
     right(90)
-    triangle(207, -150, 65, 90)
+    triangle(207, -150, 65, 90, 'red')
     left(90)
-    triangle(257, -288, 65, 90)
+    triangle(257, -288, 65, 90, 'pink')
     left(45)
-    square(207, -309, 45)
+    square(207, -309, 45, 'orange')
     left(45)
-    right_triangle(190, -328, 25, 50)
+    right_triangle(190, -328, 25, 50, 'yellow')
     right(90)
-    parallelogram(260, -240, 50, 43)
-
+    parallelogram(260, -240, 50, 43, 'purple')
 
 hideturtle()
 rabbit()
@@ -304,6 +303,7 @@ rocket()
 
 
 done()
+
 
 
 
