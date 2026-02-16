@@ -8,9 +8,9 @@ speed(7)
 
 
 #параллелограмм, a,b - пары параллельных сторон
-def parallelogram(x, y, a, b):
-    fillcolor('yellow')
-    pencolor('yellow')
+def parallelogram(x, y, a, b, color):
+    fillcolor(color)
+    pencolor(color)
     begin_fill()
     up()
     goto(x, y)
@@ -27,9 +27,9 @@ def parallelogram(x, y, a, b):
     home()
 
 #равнобедренный треугольник, b - основание, a - равные стороны
-def triangle(x, y, a, b):
-    fillcolor('blue')
-    pencolor('blue')
+def triangle(x, y, a, b, color):
+    fillcolor(color)
+    pencolor(color)
     begin_fill()
     up()
     goto(x, y)
@@ -46,12 +46,12 @@ def triangle(x, y, a, b):
     home()
 
 # прямоугольник: а- длина, b - высота 
-def rectangle(x, y, a, b):
+def rectangle(x, y, a, b, color):
     up()
     goto(x, y)
     down()
-    color("salmon")
-    fillcolor('salmon')
+    color(color)
+    fillcolor(color)
     begin_fill()
     for i in range(2):
         forward(a)
@@ -62,10 +62,10 @@ def rectangle(x, y, a, b):
     up()
     home()
 
-def equilateral_triangle(x, y, a):
+def equilateral_triangle(x, y, a, color):
     #a - длина стороны треугольника
-    color("green")
-    fillcolor("green")
+    color(color)
+    fillcolor(color)
     up()
     setposition(x, y)  #начальная точка
     down()
@@ -80,12 +80,12 @@ def equilateral_triangle(x, y, a):
     home()
 
 #трапеция, а - нижнее основание
-def trapezoid(x, y, a):
+def trapezoid(x, y, a, color):
     up()
     setposition(x, y)
     down()
-    pencolor('purple')
-    fillcolor('purple')
+    pencolor(color)
+    fillcolor(color)
     begin_fill()
     forward(a)
     left(120)
@@ -98,13 +98,12 @@ def trapezoid(x, y, a):
     up()
     home()
 #ромб, а - стороны
-def rhombus(x, y, a):
-    color('cyan')
+def rhombus(x, y, a, color):
+    color(color)
     up()
     setposition(x, y)
     down()
-    pencolor('cyan')
-    fillcolor('cyan')
+    fillcolor(color)
     begin_fill()
     right(60)
     for _ in range(2):
@@ -118,12 +117,12 @@ def rhombus(x, y, a):
 
 
 #квадрат, а - сторона
-def square(x, y, a):
+def square(x, y, a, color):
     up()
     setposition(x, y)
     down()
-    color("pink")
-    fillcolor("pink")
+    color(color)
+    fillcolor(color)
     begin_fill()
 
     for i in range(4):
@@ -136,13 +135,12 @@ def square(x, y, a):
 
 
 #прямоугольный треугольник, a, b - катеты
-def right_triangle(x, y, a, b):
+def right_triangle(x, y, a, b, color):
     up()
     setposition(x, y)
     down()
-    color("orange")
-    fillcolor("orange")
-    pencolor("orange")
+    color(color)
+    fillcolor(color)
     begin_fill()
     forward(a)
     left(90)
@@ -157,99 +155,96 @@ def right_triangle(x, y, a, b):
 #рыба
 def fish():
     left(-60)
-    parallelogram(-290, -215, -45, -27)
+    parallelogram(-290, -215, -45, -27, "blue")
     rhombus(-290, -215, 27)
     left(180)
-    right_triangle(-290, -215, 27, 30)
-    right_triangle(-346, -245, 27, 30)
+    right_triangle(-290, -215, 27, 30, "red")
+    right_triangle(-346, -245, 27, 30, "purple")
     left(90)
-    right_triangle(-261.5, -215, 47.5, 27)
-    right_triangle(-288.5, -262.5, 27, 47.5)
+    right_triangle(-261.5, -215, 47.5, 27, "green")
+    right_triangle(-288.5, -262.5, 27, 47.5, "orange")
     right(90)
-    triangle(-261.5,-195,32.5,40)
+    triangle(-261.5,-195,32.5,40, "black")
 
 
 def cat():
     right(90)
-    rhombus(-160, -90, 35)
+    rhombus(-160, -90, 35, "orange")
     right(90)
-    triangle(-190,-60,38,47)
+    triangle(-190,-60,38,47, "blue")
     left(90)
-    triangle(-130,-106,38,47)
+    triangle(-130,-106,38,47, "purple")
     left(90)
-    triangle(-150,-185,52,64)
+    triangle(-150,-185,52,64, "yellow")
     right(90)
-    triangle(-148,-121,70,115)
-    right_triangle(-174, -275, 71, 100)
-    parallelogram(-103, -275, 50, 45)
+    triangle(-148,-121,70,115, "blue")
+    right_triangle(-174, -275, 71, 100, "red")
+    parallelogram(-103, -275, 50, 45, "green")
 
 
 
 # рисунок "самолёт"
 def plane():
-    parallelogram(20, 200, 60, 35)
-    equilateral_triangle(84, 200, 35)
-    right_triangle(107, 230, 55, 95)
+    parallelogram(20, 200, 60, 35, "blue")
+    equilateral_triangle(84, 200, 35, "lightblue")
+    right_triangle(107, 230, 55, 95, "seablue")
     left(90)
-    right_triangle(162, 133, 95, 55)
-    square(165, 205, 35)
+    right_triangle(162, 133, 95, 55, "blue")
+    square(165, 205, 35, "green")
     left(180)
-    right_triangle(243, 240, 40, 35)
-    right_triangle(193, 243, 50, 35)
+    right_triangle(243, 240, 40, 35, "blue")
+    right_triangle(193, 243, 50, 35, "lightblue")
 
 
 # рисунок "вертолёт"
 def helicopter():
     left(45)
-    square(45, 43, 40)
+    square(45, 43, 40, "red")
     left(180)
-    triangle(112, 53, 35, 52)
-    triangle(91, 30, 35, 52)
+    triangle(112, 53, 35, 52, "orange")
+    triangle(91, 30, 35, 52, "yellow")
     left(90)
-    triangle(175, 5, 74, 100)
+    triangle(175, 5, 74, 100, "red")
     left(270)
-    triangle(180, 105, 74, 100)
-    parallelogram(180, 110, 55, 35)
-    triangle(110, 110, 50, 65)
+    triangle(180, 105, 74, 100, "green")
+    parallelogram(180, 110, 55, 35, "blue")
+    triangle(110, 110, 50, 65, "salmon")
 
 def rabbit():
-    right_triangle(-370,180,80,80)
-    square(-285, 240,40)
+    right_triangle(-370,180,80,80, "purple")
+    square(-285, 240,40, "black")
     left(180)
-    parallelogram(-265, 285, 30, 50)
+    parallelogram(-265, 285, 30, 50, "yellow")
     left(180)
-    color('medium blue')
-    begin_fill()
-    right_triangle(-290, 175, 80, 80)
-    end_fill()
+    right_triangle(-290, 175, 80, 80, "blue")
     right(90)
-    triangle(-285, 205, 40, 60)
-    right_triangle(-365, 95, 50, 50)
+    triangle(-285, 205, 40, 60, "green")
+    right_triangle(-365, 95, 50, 50, "red")
     left(180)
     
 
 def flower():
     left(180)
-    trapezoid(-80, 135, 100)
+    trapezoid(-80, 135, 100, "yellow")
     left(180)
-    trapezoid(-55, 180, 150)
-    rhombus(-145, 207, 30)
+    trapezoid(-55, 180, 150, "blue")
+    rhombus(-145, 207, 30, "red")
     left(90)
-    trapezoid(-130, 235, 90)
+    trapezoid(-130, 235, 90, "purple")
     right(90)
-    trapezoid(-130, 325, 90)
+    trapezoid(-130, 325, 90, "purple")
     left(90)
-    equilateral_triangle(-175, 260, 40)
+    equilateral_triangle(-175, 260, 40, "green")
     left(30)
-    equilateral_triangle(-175,300,50)
+    equilateral_triangle(-175,300,50, "green")
     right(30)
-    equilateral_triangle(-130, 325, 50)
+    equilateral_triangle(-130, 325, 50, "green")
     right(90)
-    equilateral_triangle(-85, 298, 40)
+    equilateral_triangle(-85, 298, 40, "green")
     right(30)
-    equilateral_triangle(-130, 235, 50)
+    equilateral_triangle(-130, 235, 50, "green")
     left(150)
-    equilateral_triangle(-130, 233, 50)
+    equilateral_triangle(-130, 233, 50, "green")
 
 hideturtle()
 rabbit()
@@ -262,6 +257,7 @@ helicopter()
 
 
 done()
+
 
 
 
