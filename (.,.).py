@@ -84,8 +84,7 @@ def trapezoid(x, y, a, b):
     up()
     setposition(x, y)
     down()
-    pencolor('white')
-    pensize(2)
+    pencolor('purple')
     fillcolor('purple')
     begin_fill()
     forward(a)
@@ -104,8 +103,7 @@ def rhombus(x, y, a):
     up()
     setposition(x, y)
     down()
-    pencolor('white')
-    pensize(2)
+    pencolor('cyan')
     fillcolor('cyan')
     begin_fill()
     right(60)
@@ -175,6 +173,7 @@ trapezoid(0, 0, 200, 100)
 rhombus(100, 0, 100)
 
 done()
+
 
 
 
