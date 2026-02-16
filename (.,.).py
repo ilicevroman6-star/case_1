@@ -79,8 +79,9 @@ def equilateral_triangle(x, y, a):
     end_fill()
     up()
     home()
-#трапеция, а - нижнее основание, в - верхнее основание
-def trapezoid(x, y, a, b):
+
+#трапеция, а - нижнее основание
+def trapezoid(x, y, a):
     up()
     setposition(x, y)
     down()
@@ -89,11 +90,11 @@ def trapezoid(x, y, a, b):
     begin_fill()
     forward(a)
     left(120)
-    forward(100)
+    forward(50)
     left(60)
-    forward(b)
+    forward(a-50)
     left(60)
-    forward(100)
+    forward(50)
     end_fill()
     up()
     home()
@@ -174,9 +175,7 @@ def fish():
     right(90)
     triangle(-261.5,-195,32.5,40)
 
-fish()
 
-#кот
 def cat():
     right(90)
     rhombus(-160, -90, 35)
@@ -191,7 +190,7 @@ def cat():
     right_triangle(-174, -275, 71, 100)
     parallelogram(-103, -275, 50, 45)
 
-cat()
+
 
 # рисунок "самолёт"
 def plane():
@@ -205,7 +204,6 @@ def plane():
     right_triangle(243, 240, 40, 35)
     right_triangle(193, 243, 50, 35)
 
-plane()
 
 # рисунок "вертолёт"
 def helicopter():
@@ -221,12 +219,58 @@ def helicopter():
     parallelogram(180, 110, 55, 35)
     triangle(110, 110, 50, 65)
 
+def rabbit():
+    right_triangle(-370,180,80,80)
+    square(-285, 240,40)
+    left(180)
+    parallelogram(-265, 285, 30, 50)
+    left(180)
+    color('medium blue')
+    begin_fill()
+    right_triangle(-290, 175, 80, 80)
+    end_fill()
+    right(90)
+    triangle(-285, 205, 40, 60)
+    right_triangle(-365, 95, 50, 50)
+    left(180)
+    right_triangle_2(-280,95, 30, 30)
 
+
+def flower():
+    left(180)
+    trapezoid(-80, 135, 100)
+    left(180)
+    trapezoid(-55, 180, 150)
+    rhombus(-145, 207, 30)
+    left(90)
+    trapezoid(-130, 235, 90)
+    right(90)
+    trapezoid(-130, 325, 90)
+    left(90)
+    equilateral_triangle(-175, 260, 40)
+    left(30)
+    equilateral_triangle(-175,300,50)
+    right(30)
+    equilateral_triangle(-130, 325, 50)
+    right(90)
+    equilateral_triangle(-85, 298, 40)
+    right(30)
+    equilateral_triangle(-130, 235, 50)
+    left(150)
+    equilateral_triangle(-130, 233, 50)
+
+rabbit()
+flower()
+
+fish()
+cat()
+plane()
 helicopter()
 hideturtle()
 
 
 done()
+
 
 
 
