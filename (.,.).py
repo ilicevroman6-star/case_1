@@ -152,6 +152,25 @@ def right_triangle(x, y, a, b, color):
     end_fill()
     up()
     home()
+
+def right_triangle_2(x, y, a, b, color):
+    up()
+    setposition(x, y)
+    down()
+    fillcolor(color)
+    pencolor(color)
+    begin_fill()
+    forward(a)
+    right(90)
+    forward(b)
+    c = sqrt(a ** 2 + b ** 2) #гипотенуза
+    o = degrees(atan(a / b))
+    right(180 - o)
+    forward(c)
+    end_fill()
+    up()
+    home()
+
 #рыба
 def fish():
     left(-60)
@@ -211,20 +230,20 @@ def helicopter():
     triangle(110, 110, 50, 65, "salmon")
 
 def rabbit():
-    right_triangle(-370,180,80,80, "purple")
-    square(-285, 240,40, "black")
-    left(180)
-    parallelogram(-265, 285, 30, 50, "yellow")
+    right_triangle(-370, 180, 80, 80, "purple")
+    square(-285, 240, 40, "black")
+
+    parallelogram(-295, 285, 30, 50, "yellow")
     left(180)
     right_triangle(-290, 175, 80, 80, "blue")
     right(90)
     triangle(-285, 205, 40, 60, "green")
     right_triangle(-365, 95, 50, 50, "red")
     left(180)
-    
+    right_triangle_2(-280, 95, 30, 30, 'orange')
 
 def flower():
-    
+    left(180)
     trapezoid(-80, 135, 100, "yellow")
     left(180)
     trapezoid(-55, 180, 150, "blue")
@@ -236,7 +255,7 @@ def flower():
     left(90)
     equilateral_triangle(-175, 260, 40, "green")
     left(30)
-    equilateral_triangle(-175,300,50, "green")
+    equilateral_triangle(-175, 300, 50, "green")
     right(30)
     equilateral_triangle(-130, 325, 50, "green")
     right(90)
@@ -285,6 +304,7 @@ rocket()
 
 
 done()
+
 
 
 
