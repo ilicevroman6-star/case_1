@@ -160,7 +160,38 @@ def right_triangle(x, y, a, b):
     end_fill()
     up()
     home()
+#рыба
+def fish():
+    left(-60)
+    parallelogram(-290, -215, -45, -27)
+    rhombus(-290, -215, 27)
+    left(180)
+    right_triangle(-290, -215, 27, 30)
+    right_triangle(-346, -245, 27, 30)
+    left(90)
+    right_triangle(-261.5, -215, 47.5, 27)
+    right_triangle(-288.5, -262.5, 27, 47.5)
+    right(90)
+    triangle(-261.5,-195,32.5,40)
 
+fish()
+
+#кот
+def cat():
+    right(90)
+    rhombus(-160, -90, 35)
+    right(90)
+    triangle(-190,-60,38,47)
+    left(90)
+    triangle(-130,-106,38,47)
+    left(90)
+    triangle(-150,-185,52,64)
+    right(90)
+    triangle(-148,-121,70,115)
+    right_triangle(-174, -275, 71, 100)
+    parallelogram(-103, -275, 50, 45)
+
+cat()
 
 hideturtle()
 right_triangle_by_angles(0, 0, 30, 60, 50)
@@ -173,6 +204,7 @@ trapezoid(0, 0, 200, 100)
 rhombus(100, 0, 100)
 
 done()
+
 
 
 
