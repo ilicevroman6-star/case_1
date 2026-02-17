@@ -228,40 +228,40 @@ def helicopter():
 # Кролик.
 def rabbit():
     right_triangle(-370, 180, 80, 80, "crimson")
-    square(-285, 240, 40, "coral")
-    parallelogram(-295, 285, 30, 50, "yellow green")
+    square(-287, 240, 40, "coral")
+    parallelogram(-295, 283, 30, 50, "yellow green")
     left(180)
-    right_triangle(-290, 175, 80, 80, "goldenrod")
+    right_triangle(-290, 178, 80, 80, "goldenrod")
     right(90)
-    triangle(-285, 205, 40, 60, "hot pink")
-    right_triangle(-365, 95, 50, 50, "light slate blue")
+    triangle(-287, 210, 40, 60, "hot pink")
+    right_triangle(-370, 95, 50, 50, "light slate blue")
     left(180)
-    right_triangle_2(-280, 95, 30, 30, 'orchid')
+    right_triangle_2(-288, 95, 30, 30, 'orchid')
 
 # Цветок.
 def flower():
     left(180)
     trapezoid(-80, 135, 100, "dark olive green")
     left(180)
-    trapezoid(-55, 180, 150, "pale violet red")
-    rhombus(-145, 207, 30, "light cyan")
+    trapezoid(-55, 179, 150, "pale violet red")
+    rhombus(-145, 207, 30, "powder blue")
     left(90)
     trapezoid(-130, 235, 90, "khaki")
     right(90)
     trapezoid(-130, 325, 90, "khaki")
     left(90)
-    equilateral_triangle(-175, 260, 40, "medium purple")
+    equilateral_triangle(-174, 260, 40, "medium purple")
     left(30)
     equilateral_triangle(-175, 300, 50, "medium purple")
     right(30)
     equilateral_triangle(-130, 325, 50, "medium purple")
     right(90)
-    equilateral_triangle(-85, 298, 40, "medium purple")
+    equilateral_triangle(-86, 298, 40, "medium purple")
     right(30)
     equilateral_triangle(-130, 235, 50, "medium purple")
     left(150)
-    equilateral_triangle(-130, 233, 50, "medium purple")
-
+    equilateral_triangle(-130, 234, 50, "medium purple")
+    
 # Робот.
 def robot():
     square(60, -245, 70, "green")
@@ -300,7 +300,3 @@ robot()
 rocket()
 
 done()
-
-
-
-
