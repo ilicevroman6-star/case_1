@@ -173,30 +173,31 @@ def right_triangle_2(x, y, a, b, col):
 # Рыба.
 def fish():
     left(-60)
-    parallelogram(-293, -211, -45, -27, 'green')
+    parallelogram(-293, -213, -45, -27, 'green')
     rhombus(-290, -215, 27, 'orange')
     left(180)
-    right_triangle(-293, -219, 27, 30, 'pink')
-    right_triangle(-353, -249, 27, 30, 'purple')
+    right_triangle(-293, -217, 27, 30, 'pink')
+    right_triangle(-351, -247, 27, 30, 'purple')
     left(90)
-    right_triangle(-257.5, -214, 47.5, 27, 'red')
-    right_triangle(-284.5, -263.5, 27, 47.5, 'yellow')
+    right_triangle(-259.5, -214, 47.5, 27, 'red')
+    right_triangle(-286.5, -263.5, 27, 47.5, 'yellow')
     right(90)
-    triangle(-251.5,-195,32.5,40, 'cyan')
+    triangle(-255.5, -195, 32.5, 40, 'cyan')
+
 
 # Кот.
 def cat():
     right(90)
     rhombus(-160, -90, 35, 'blue')
     right(97)
-    triangle(-188,-55,38,47, 'orange')
+    triangle(-188, -57, 38, 47, 'orange')
     left(97)
-    triangle(-126,-102,38,47,'red')
+    triangle(-126, -104, 38, 47, 'red')
     left(90)
-    triangle(-152,-190,52,64, 'cyan')
+    triangle(-152, -190, 52, 64, 'cyan')
     right(90)
-    triangle(-147,-126,70,115, 'green')
-    right_triangle(-172, -285, 71, 100, 'purple')
+    triangle(-147, -126, 70, 115, 'green')
+    right_triangle(-173, -285, 71, 100, 'purple')
     parallelogram(-98, -285, 50, 45, 'yellow')
 
 # Самолёт.
@@ -300,3 +301,4 @@ robot()
 rocket()
 
 done()
+
