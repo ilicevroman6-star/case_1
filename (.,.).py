@@ -1,4 +1,4 @@
-#Разработчики: Белявская Алиса, Пимшина Дарья, Макарова Анастасия, Ильичёв Роман
+# Разработчики: Белявская Алиса, Пимшина Дарья, Макарова Анастасия, Ильичёв Роман.
 
 from turtle import *
 from math import sqrt
@@ -7,10 +7,10 @@ from math import degrees
 from math import atan
 speed(7)
 
-#параллелограмм, a,b - пары параллельных сторон; начинает рисовать с левого нижнего угла
-def parallelogram(x, y, a, b, color):
-    fillcolor(color)
-    pencolor(color)
+# Параллелограмм, a,b - пары параллельных сторон; начинает рисовать с левого нижнего угла.
+def parallelogram(x, y, a, b, col):
+    fillcolor(col)
+    pencolor(col)
     begin_fill()
     up()
     goto(x, y)
@@ -26,16 +26,16 @@ def parallelogram(x, y, a, b, color):
     up()
     home()
 
-#равнобедренный треугольник, b - основание, a - равные стороны; начинает рисовать с левого угла при основании
-def triangle(x, y, a, b, color):
-    fillcolor(color)
-    pencolor(color)
+# Равнобедренный треугольник, b - основание, a - равные стороны; начинает рисовать с левого угла при основании.
+def triangle(x, y, a, b, col):
+    fillcolor(col)
+    pencolor(col)
     begin_fill()
     up()
     goto(x, y)
     down()
-    t1 = degrees(acos(b / (2 * a))) #величина угла при основании в градусах
-    t2 = degrees(acos(1 - (b**2 / (2 * a**2)))) #величина угла между равными сторонами в градусах
+    t1 = degrees(acos(b / (2 * a))) # Величина угла при основании в градусах.
+    t2 = degrees(acos(1 - (b**2 / (2 * a**2)))) # Величина угла между равными сторонами в градусах.
     forward(b)
     left(180 - t1)
     forward(a)
@@ -45,13 +45,13 @@ def triangle(x, y, a, b, color):
     up()
     home()
 
-# прямоугольник: а - длина, b - высота; начинает рисовать с левого нижнего угла
-def rectangle(x, y, a, b, color):
+# Прямоугольник: а - длина, b - высота; начинает рисовать с левого нижнего угла.
+def rectangle(x, y, a, b, col):
     up()
     goto(x, y)
     down()
-    pencolor(color)
-    fillcolor(color)
+    pencolor(col)
+    fillcolor(col)
     begin_fill()
     for i in range(2):
         forward(a)
@@ -62,12 +62,11 @@ def rectangle(x, y, a, b, color):
     up()
     home()
 
-#равносторонний треугольник, а - длина стороны треугольника; начинает рисовать с левого нижнего угла
-def equilateral_triangle(x, y, a, color):
-    pencolor(color)
-    fillcolor(color)
+# Равносторонний треугольник, а - длина стороны треугольника; начинает рисовать с левого нижнего угла.
+def equilateral_triangle(x, y, a, col):
+    pencolor(col)
+    fillcolor(col)
     up()
-    #начальная точка
     setposition(x, y) 
     down()
     begin_fill()
@@ -80,13 +79,13 @@ def equilateral_triangle(x, y, a, color):
     up()
     home()
 
-#трапеция, а - нижнее основание
-def trapezoid(x, y, a, color):
+# Трапеция, а - нижнее основание.
+def trapezoid(x, y, a, col):
     up()
     setposition(x, y)
     down()
-    pencolor(color)
-    fillcolor(color)
+    pencolor(col)
+    fillcolor(col)
     begin_fill()
     forward(a)
     left(120)
@@ -99,13 +98,13 @@ def trapezoid(x, y, a, color):
     up()
     home()
 
-#ромб, а - стороны
-def rhombus(x, y, a, color):
-    pencolor(color)
+# Ромб, а - стороны.
+def rhombus(x, y, a, col):
+    pencolor(col)
     up()
     setposition(x, y)
     down()
-    fillcolor(color)
+    fillcolor(col)
     begin_fill()
     right(60)
     for _ in range(2):
@@ -117,13 +116,13 @@ def rhombus(x, y, a, color):
     up()
     home()
 
-#квадрат, а - сторона
-def square(x, y, a, color):
+# Квадрат, а - сторона.
+def square(x, y, a, col):
     up()
     setposition(x, y)
     down()
-    pencolor(color)
-    fillcolor(color)
+    pencolor(col)
+    fillcolor(col)
     begin_fill()
     for i in range(4):
         forward(a)
@@ -133,18 +132,18 @@ def square(x, y, a, color):
     home()
     down()
 
-#прямоугольный треугольник, a, b - катеты
-def right_triangle(x, y, a, b, color):
+# Прямоугольный треугольник, a, b - катеты.
+def right_triangle(x, y, a, b, col):
     up()
     setposition(x, y)
     down()
-    pencolor(color)
-    fillcolor(color)
+    pencolor(col)
+    fillcolor(col)
     begin_fill()
     forward(a)
     left(90)
     forward(b)
-    c = sqrt(a ** 2 + b ** 2) #гипотенуза
+    c = sqrt(a ** 2 + b ** 2) # Гипотенуза
     o = degrees(atan(a / b))
     left(180 - o)
     forward(c)
@@ -152,18 +151,18 @@ def right_triangle(x, y, a, b, color):
     up()
     home()
 
-#прямоугольный треугольник, отзеркаленный относительно катета b
-def right_triangle_2(x, y, a, b, color):
+# Прямоугольный треугольник, отзеркаленный относительно катета b.
+def right_triangle_2(x, y, a, b, col):
     up()
     setposition(x, y)
     down()
-    fillcolor(color)
-    pencolor(color)
+    fillcolor(col)
+    pencolor(col)
     begin_fill()
     forward(a)
     right(90)
     forward(b)
-    c = sqrt(a ** 2 + b ** 2) #гипотенуза
+    c = sqrt(a ** 2 + b ** 2) # Гипотенуза
     o = degrees(atan(a / b))
     right(180 - o)
     forward(c)
@@ -171,7 +170,7 @@ def right_triangle_2(x, y, a, b, color):
     up()
     home()
 
-#рыба
+# Рыба.
 def fish():
     left(-60)
     parallelogram(-293, -211, -45, -27, 'green')
@@ -185,7 +184,7 @@ def fish():
     right(90)
     triangle(-251.5,-195,32.5,40, 'cyan')
 
-#кот
+# Кот.
 def cat():
     right(90)
     rhombus(-160, -90, 35, 'blue')
@@ -200,19 +199,19 @@ def cat():
     right_triangle(-172, -285, 71, 100, 'purple')
     parallelogram(-98, -285, 50, 45, 'yellow')
 
-# рисунок "самолёт"
+# Самолёт.
 def plane():
-    parallelogram(20, 200, 60, 35, "skyblue")
-    equilateral_triangle(84, 200, 35, "lightblue")
-    right_triangle(107, 230, 55, 95, "royalblue")
+    parallelogram(20, 200, 60, 35, "sky blue")
+    equilateral_triangle(84, 200, 35, "light blue")
+    right_triangle(107, 230, 55, 95, "royal blue")
     left(90)
-    right_triangle(162, 133, 95, 55, "royalblue")
-    square(165, 205, 35, "skyblue")
+    right_triangle(162, 133, 95, 55, "royal blue")
+    square(165, 205, 35, "sky blue")
     left(180)
-    right_triangle(243, 240, 40, 35, "deepskyblue")
+    right_triangle(243, 240, 40, 35, "deep sky blue")
     right_triangle(193, 243, 50, 35, "navy")
 
-# рисунок "вертолёт"
+# Вертолёт.
 def helicopter():
     left(45)
     square(45, 43, 40, "coral")
@@ -224,9 +223,9 @@ def helicopter():
     left(270)
     triangle(180, 105, 74, 100, "firebrick")
     parallelogram(180, 110, 55, 35, "coral")
-    triangle(110, 110, 50, 65, "lightcoral")
+    triangle(110, 110, 50, 65, "light coral")
 
-#кролик
+# Кролик.
 def rabbit():
     right_triangle(-370, 180, 80, 80, "crimson")
     square(-285, 240, 40, "coral")
@@ -239,7 +238,7 @@ def rabbit():
     left(180)
     right_triangle_2(-280, 95, 30, 30, 'orchid')
 
-#цветок
+# Цветок.
 def flower():
     left(180)
     trapezoid(-80, 135, 100, "dark olive green")
@@ -263,7 +262,7 @@ def flower():
     left(150)
     equilateral_triangle(-130, 233, 50, "medium purple")
 
-#робот
+# Робот.
 def robot():
     square(60, -245, 70, "green")
     triangle(60, -170, 50, 65, 'blue')
@@ -273,7 +272,7 @@ def robot():
     rectangle(100, -318, 20, 70, 'yellow')
     rhombus(82, -210, 25, 'purple')
 
-#ракета
+# Ракета.
 def rocket():
     equilateral_triangle(209, -140, 50, "green")
     left(90)
@@ -301,6 +300,7 @@ robot()
 rocket()
 
 done()
+
 
 
 
