@@ -290,6 +290,7 @@ def rocket():
     parallelogram(260, -240, 50, 43, 'purple')
 
 hideturtle()
+tracer(False)
 
 rabbit()
 flower()
@@ -300,5 +301,8 @@ helicopter()
 robot()
 rocket()
 
+update()
+
 done()
+
 
